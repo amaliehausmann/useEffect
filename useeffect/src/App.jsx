@@ -9,7 +9,7 @@ function App() {
   const [isRunning, setIsRunning] = useState(false);
 
   useEffect(() => {
-    let timer;
+    let timer = 1;
 
     if (isRunning) {
       timer = setInterval(() => {
@@ -40,9 +40,23 @@ function App() {
   return (
     <>
       <StopwatchDisplay time={seconds}></StopwatchDisplay>
-      <StopWatchBtn name="Start" action={StartStopWatch}></StopWatchBtn>
-      <StopWatchBtn name="Stop" action={StopStopWatch}></StopWatchBtn>
-      <StopWatchBtn name="Reset" action={ResetStopWatch}></StopWatchBtn>
+      <section className="buttonSection">
+        <StopWatchBtn
+          styling="startStyle"
+          name="Start"
+          action={StartStopWatch}
+        ></StopWatchBtn>
+        <StopWatchBtn
+          styling="stopStyle"
+          name="Stop"
+          action={StopStopWatch}
+        ></StopWatchBtn>
+        <StopWatchBtn
+          styling="resetStyle"
+          name="Reset"
+          action={ResetStopWatch}
+        ></StopWatchBtn>
+      </section>
     </>
   );
 }

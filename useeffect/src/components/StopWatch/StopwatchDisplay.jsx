@@ -1,7 +1,8 @@
+import style from './StopwatchDisplay.module.scss'
 
 export function StopwatchDisplay({time}){
 
     return(
-        <h2>{time}</h2>
+        <h2 className={style.displayStyling}>{time}</h2>
     )
 }

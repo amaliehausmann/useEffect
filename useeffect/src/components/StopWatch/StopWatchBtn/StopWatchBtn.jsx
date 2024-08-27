@@ -1,7 +1,7 @@
-
-export function StopWatchBtn({action, name}){
+import style from './StopWatchBtn.module.scss'
+export function StopWatchBtn({action, name, styling}){
 
     return(
-        <button onClick={action}>{name}</button>
+        <button className={`${style[styling]}`} onClick={action}>{name}</button>
     )
 }
